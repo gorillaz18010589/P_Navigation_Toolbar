@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<!--
+    設定fragment的calss為 NavHostFragment
+
+    <fragment
+    將此NavHostFragment設為default 設定fragment的calss為NavHostFragment
+     android:name="androidx.navigation.fragment.NavHostFragment"
+
+     設定id
+     android:id="@+id/main_fragment"
+
+     設定id，這樣他才能攔截系統back事件，
+    如果layout中只有一個NavHost可省略
+    app:defaultNavHost="true"
+    指定Navigation Graph的xml檔
+    app:navGraph="@navigation/graph"
+    />
+    -->
+
+
+
+
+       <androidx.appcompat.widget.Toolbar
+           android:id="@+id/toolbar"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           >
+
+       </androidx.appcompat.widget.Toolbar>
+
+
+
+
+
+    <fragment
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:id="@+id/main_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/graph"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

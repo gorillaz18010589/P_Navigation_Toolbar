@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph"
+    app:startDestination="@id/AFragment">
+
+    <!--
+        startDestination://開始的頁面
+        android:id="@+id/mainActivity" //id
+        android:name="tw.org.iii.appps.p_navigation_toolbar.MainActivity" //指定的Layout檔案
+        android:label="activity_main"
+        tools:layout="@layout/activity_main"
+
+
+    -->
+
+    <fragment
+        android:id="@+id/AFragment"
+        android:name="tw.org.iii.appps.p_navigation_toolbar.AFragment"
+        android:label="fragment_a"
+        tools:layout="@layout/fragment_a" >
+        <action
+            android:id="@+id/action_AFragment_to_BFragment"
+            app:destination="@id/BFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/BFragment"
+        android:name="tw.org.iii.appps.p_navigation_toolbar.BFragment"
+        android:label="fragment_b"
+        tools:layout="@layout/fragment_b" />
+</navigation>
